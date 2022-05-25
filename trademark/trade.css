@@ -1,0 +1,416 @@
+
+body{
+    font-size: medium;
+}
+
+
+.over{
+    margin-top: 40px;
+    display: flex;
+}
+
+
+.overview{
+   
+    padding-left: 230px;
+    background-color: white;
+    padding-right: 50px;
+
+
+}
+.view{
+   
+    padding-left: 80px;
+
+    padding-right: 160px;
+    margin-bottom: 70px;
+}
+.view h2{
+    margin-top: 30px;
+}
+
+.dev p{
+    word-spacing: 15px;
+}
+
+
+.but{
+    background-color: white;
+    border: 2px #510216;
+}
+
+.container1{
+    width: 90%;
+    margin-left: 4px;
+    overflow: hidden;
+    background: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.container1 h2{
+    text-align: left;
+    align-items: center;
+}
+.container1 ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.container1 ul li{
+    float:left;
+    list-style: none;
+    width:20%;
+   
+    background: white;
+    margin :10px 10px 10px 0px; 
+  
+    box-sizing: border-box;
+}
+.container1 ul li:hover{
+    opacity: 0.8;
+}
+
+.container1 ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    background: #008037;    
+    text-align: center;
+    color:white;
+    font-size: 20px;
+   
+}
+
+.container2{
+    padding-top: 10px;
+}
+
+.container5{
+    width: 90%;
+    max-width: 60%;
+    margin-left: 500px;
+    overflow: hidden;
+    background: white;
+    margin-top: 20px;
+}
+.container5 h4{
+    max-width: 62%;
+}
+
+
+@media screen and (max-width:1250px){
+    .container_head ul li{
+        width:40%;
+        margin-left: 40px;
+         
+    }
+}
+
+/*
+section{
+    padding-left: 450px;
+    font-size: 24px;
+}
+.faq{
+    max-width: 700px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+.question h3{
+    font-size: 1.8 rem;
+
+}
+.answer{
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1.4s ease;
+}
+.answer p{
+    padding-top: 1 rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    
+}
+.faq.active.answer{
+    max-height: 300px;
+    animation: fade 1s easier;
+}
+
+.faq.active svg {
+    transform: rotate(180deg);
+}
+svg {
+    transition: transform 0.5s ease;
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translate(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}*/
+
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family:'Times New Roman', Times, serif; 
+    font-size: large;
+  
+  }
+  
+  
+  
+ 
+
+      .faq{
+          
+            padding-left: 490px;
+            padding-right: 490px;
+            max-width: 100%;
+        }
+        .accordion {
+          background-color: white;
+          color: black;
+          cursor: pointer;
+          padding-left: 600px;
+          padding-right: 380px;
+          max-width: 50%;
+          
+          margin-left: 480px;
+          margin-right: 350px;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 1.2rem;
+          transition: 0.4s;
+        }
+        
+        .active, .accordion:hover {
+          background-color: white;
+        }
+        
+        .accordion:after {
+         
+            color: white;
+            font-weight: bold;
+            float: right;
+           /* margin-left: 150px;*/
+        }
+        
+        .active:after {
+          content: "\2212";
+          max-width: 100%;
+        }
+        
+        .panel {
+       
+        }
+		.faq-image img{
+			width: 100%;
+		}
+
+        .accordion__content{
+            width: 100%;
+        }
+
+
+
+
+/*overvie*/
+.bullet{
+    max-width: 1px;
+    max-height: 1px;
+}
+ .benefit-img{
+     width: 20px;
+     height: 20px;
+ }
+
+/*   
+  
+  @media screen and (max-device-width: 800px){
+  
+	#topbtn {
+	  font-size: 1rem;
+	}
+  } */
+ /*Testimonials*/
+ 
+
+
+
+
+
+
+
+
+
+
+
+/*
+ body {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 40px 0;
+}
+h2 {
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+h2::after {
+	content: "";
+	width: 140px;
+	position: absolute;
+	margin: 0 auto;
+	height: 3px;
+	background: #db584e;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+    opacity: .8;
+}*/
+.containerc{
+    background-color: white;
+    max-width: 100%;
+}
+
+.containerc h2{
+    text-align: center;
+    color: black;
+}
+.col-center {
+	margin: 0 auto;
+	float: none !important;
+    
+}
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+    margin-left: 95px;
+    max-width: 80%;
+}
+.carousel-item {
+	color: black;
+	font-size: 14px;
+    text-align: center;
+	overflow: hidden;
+    min-height: 290px;
+}
+.carousel .item .img-box {
+	width: 135px;
+	height: 135px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+.carousel .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+.carousel .testimonial {
+	padding: 30px 0 10px;
+}
+.carousel .overview {	
+	font-style: italic;
+}
+.carousel .overview b {
+	text-transform: uppercase;
+	color: #db584e;
+}
+.carousel .carousel-control {
+	width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+	background: none;
+}
+.carousel-control i {
+    font-size: 68px;
+	line-height: 42px;
+    position: absolute;
+    display: inline-block;
+	color: #510216;
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 white;
+}
+.carousel .carousel-indicators {
+	bottom: -40px;
+}
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 1px 3px;
+	border-radius: 50%;
+}
+.carousel-indicators li {	
+	background: white;
+	border-color: transparent;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-indicators li.active {	
+	background: #555;		
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+.carousel-inner{
+    background-color: white;
+}
+
+
+/*footer*/
+
+
+.footer{
+    margin-top: 50px;
+    background-color: red;
+    font-size: 15px;
+    margin: 0 0 0 0;
+    margin-bottom: 40px;
+  }
+  .footer .me-5 {
+    text-align:left;
+  }
+  .footer #socialicon a {
+    text-decoration: none;
+  }
+  
+  .footer #socialicon i{
+    text-align: left;
+    font-size: large;
+  }
+  .footer .p-3{
+    padding: 1rem;
+  }
+  .footer a{
+    text-decoration: none;
+  }
+  
+  .footer p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .footer #socialicon .text-white {
+    margin-right: 0.5rem;
+  }
+
+
+@media screen and (min-width: 480px) {
+    div {
+        width: 100%;
+    }
+    
+}

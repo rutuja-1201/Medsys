@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<head>
+ <title>Contact Us</title>
+  <link rel="stylesheet" href="CONTACT_US.css">
+  <!-- <link rel="stylesheet" href="navfoot.css"> -->
+
+  <!-- Fontawesome CDN Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+<style>
+     
+/*Navigation bar*/
+
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family:'Times New Roman', Times, serif; 
+
+}
+.logo-container img{
+  width:230px;
+   height:70px;
+}
+header ul{
+  list-style: none;
+  padding: 0;
+  flex-direction: row;
+}
+
+header a{
+  text-decoration: none;
+}
+
+header{
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  width: 100%;
+  z-index: 1000;
+}
+
+
+header .container{
+  max-width:100%;
+  margin: 0 0 ;
+  padding-right: 0%;
+  display: flex;
+  position: relative;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding-left: var(--bs-gutter-x,.75rem);
+
+}
+
+header .logo-container{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  
+}
+
+header .nav-btn{
+  flex: 3;
+  display: flex;
+}
+
+header .nav-links{
+  flex: 2;
+}
+
+header .log-sign{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+header .logo span{
+  font-weight: 300;
+}
+
+
+
+.nav-links > ul{
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.nav-link{
+  position: relative;
+}
+
+.nav-link > a{
+  line-height: 3rem;
+  color: black;
+  /* padding: 0 10px;
+  letter-spacing: 1px; */
+  font-size: 20px;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  transition: .5s;
+}
+
+.nav-link > a > i{
+  margin-left: .2rem;
+}
+
+.nav-link:hover > a{
+  transform: scale(1.1);
+  text-decoration: none;
+}
+.dropdown a:hover{
+  text-decoration: none;
+}
+.dropdown{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.dropdown ul{
+  position: relative;
+}
+
+.dropdown-link > a{
+  display: flex;
+  background-color: #fff;
+  color:black;
+  padding: 0.5rem 0.5rem;
+  font-size: 18px;
+  align-items: center;
+  justify-content: space-between;
+  transition: .3s;
+}
+/* 
+.dropdown-link:hover > a{
+  /* background-color: #560216; 
+  color: #fff;
+} */
+
+.dropdown-link:not(:nth-last-child(2)){
+  border-bottom: 1px solid #efefef;
+}
+
+.dropdown-link i{
+  transform: rotate(-90deg);
+}
+
+.arrow{
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: -5.5px;
+  left: 32px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: .3s;
+  z-index: -1;
+}
+
+.dropdown-link:first-child:hover ~ .arrow{
+  background-color: #560216;
+}
+
+ .dropdown-link{
+  position: relative;
+}
+
+ .dropdown.second{
+  top: 0;
+  left: 100%;
+  padding-left: .8rem;
+  cursor: pointer;
+  transform: translateX(10px);
+}
+
+ .dropdown.second .arrow{
+  top: 10px;
+  left: -5.5px;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{
+  transform: translate(0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hamburger-menu-container{
+  flex: 1;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hamburger-menu{
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hamburger-menu div{
+  width: 1.6rem;
+  height: 3px;
+  border-radius: 3px;
+  background-color: black;
+  position: relative;
+  z-index: 1001;
+  transition: .5s;
+}
+
+.hamburger-menu div:before,
+.hamburger-menu div:after{
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color:black ;
+  border-radius: 3px;
+  transition: .5s;
+}
+
+.hamburger-menu div:before{
+  transform: translateY(-7px);
+}
+
+.hamburger-menu div:after{
+  transform: translateY(7px);
+}
+
+#check{
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 90000;
+  cursor: pointer;
+  opacity: 0;
+  display: none;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div{
+  background-color: transparent;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:before{
+  transform: translateY(0) rotate(-45deg);
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:after{
+  transform: translateY(0) rotate(45deg);
+}
+
+@keyframes animation{
+  from{
+      opacity: 0;
+      transform: translateY(15px);
+  }
+  to{
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+@media (max-width: 920px){
+  .hamburger-menu-container{
+      display: flex;
+      margin-right: 20px;
+  }
+
+
+  #check{
+      display: block;
+  }
+
+  .nav-btn{
+      position: fixed;
+      height: calc(100vh - 3rem);
+      top: 4rem;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      overflow-x: hidden;
+      overflow-y: auto;
+      transform: translateX(100%);
+      transition: .65s;
+  }
+
+  #check:checked ~ .nav-btn{
+      transform: translateX(0);
+  }
+
+  #check:checked ~ .nav-btn .nav-link,
+  #check:checked ~ .nav-btn .log-sign{
+      animation: animation .5s ease forwards var(--i);
+  }
+
+  .nav-links{
+      flex: initial;
+      width: 100%;
+  }
+
+  .nav-links > ul{
+      flex-direction: column;
+  }
+
+  .nav-link{
+      width: 100%;
+      opacity: 0;
+      transform: translateY(15px);
+  }
+
+  .nav-link > a{
+      line-height: 1;
+      padding: 0.6rem 1rem;
+  }
+
+  .nav-link:hover > a{
+      transform: scale(1);
+      background-color: white;  
+  }
+
+  .dropdown, .dropdown.second{
+      color:black;
+      position: initial;
+      top: initial;
+      left: initial;
+      transform: initial;
+      opacity: 1;
+      pointer-events: auto;
+      width: 100%;
+      padding: 0;
+      background-color: rgb(255, 255, 255);
+      display: none;
+  }
+  
+  .nav-link:hover > .dropdown,
+  .dropdown-link:hover > .dropdown{
+      display: block;
+  }
+
+  .nav-link:hover > a > i,
+  .dropdown-link:hover > a > i{
+      transform: rotate(360deg);
+  }
+
+  .dropdown-link > a{
+      background-color: transparent;
+      color:rgb(0, 0, 0);
+      padding: 0.5rem 2rem;
+      line-height: 1;
+      font-size: 18px;
+
+  }
+
+  .dropdown.second .dropdown-link > a{
+      padding: 1.2rem 2rem 1.2rem 3rem;
+  }
+
+  .dropdown.second .dropdown.second .dropdown-link > a{
+      padding: 1.2rem 2rem 1.2rem 4rem;
+  }
+
+  .dropdown-link:not(:nth-last-child(2)){
+      border-bottom: none;
+  }
+
+  .arrow{
+      z-index: 1;
+      background-color: black;
+      left: 10%;
+      transform: scale(1.1) rotate(45deg);
+      transition: .5s;
+  }
+
+  .nav-link:hover .arrow{
+      background-color: white;
+  }
+
+  .dropdown .dropdown .arrow{
+      display: none;
+  }
+
+  .dropdown-link:hover > a{
+      background-color: white;
+      color: black;
+  }
+
+  .dropdown-link:first-child:hover ~ .arrow{
+      background-color: black;
+  }
+
+  .nav-link > a > i{
+      font-size: 1.1rem;
+      transform: rotate(-90deg);
+      transition: .7s;
+  }
+
+  .dropdown i{
+      font-size: 1rem;
+      transition: .7s;
+  }
+
+  .log-sign{
+      flex: initial;
+      width: 100%;
+      padding: 1.5rem 1.9rem;
+      justify-content: flex-start;
+      opacity: 0;
+      transform: translateY(15px);
+  }
+}
+
+ 
+
+#donatebutton{
+  background-color: #386b4f;width: fit-content; color: honeydew;border-radius: 10px; margin-left: 8px; padding:0px 8px;
+}
+#donatebutton:hover{
+    /* background-color: #7bdb7b; */
+    box-shadow:0px 10px 10px #386b4f;
+}
+  .container {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  #contactusname{
+    margin-left:-10px
+  }
+
+  .mb-4, .my-4{
+    margin-bottom:0px!important;
+  }
+</style>
+
+  </head>
+
+<body>
+
+  <!-- navbar  -->
+  
+ <!-- navbar  -->
+
+ 
+ <div class="image" >
+  <img src="images/contactus header.png" alt="" srcset="" style="width:100%">
+</div>
+ <br>
+  <section class="contact">
+
+<!-- contactform      -->
+  <div class="contactform">
+    <div class="container">
+      <div class="content">
+        <br>
+        <div class="left-side">
+          <div class="address details">
+            <a href="https://g.page/medlife-foundation?share"><i class="fas fa-map-marker-alt"></i></a> 
+            <div class="topic">Address</div>
+            <div class="text-one">Medlife House. No-693, At/Post: Bahal,</div>
+            <div class="text-two">Tal: Chalisgaon Dist: Jalgaon,<br>
+               Maharashtra, India-424106 </div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <a ></a>
+            Bhushan Shirude<br>
+            +91 70204 38881 <br>
+          </div>
+          <div class="email details">
+            <a href="mailto:medsysconsultancy@gmail.com "><i class="fas fa-envelope"></i></a>
+            <div class="topic">Email</div>
+            <div class="text-one">medsysconsultancy@gmail.com </div>
+            <!-- <div class="text-two">info.codinglab@gmail.com</div> -->
+          </div>
+        </div>
+
+        <br>
+        <div class="right-side">
+          <div class="topic-text">GET IN TOUCH WITH US</div>
+        
+          <form action="#">
+
+            <div class="input-box">
+              <br>
+              <input type="text" name="name" placeholder="Enter your name" required>
+              <br>
+              <br>
+              <div class="mail">
+              <input type="email" name="email" placeholder="Enter your email" required>
+              <input style="float: right;" type="tel" name="number" placeholder="Enter your Number" required>
+            </div>
+              <br>
+            
+              <input type="text" name="message" placeholder="Enter your message" required>
+            </div>
+            <br>
+              <br>
+            <div class="input-box message-box"></div>
+            <div class="button">
+              <input type="button" name="button" value="Send Now">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- contactform      -->
+
+  <br>
+  <br>
+
+ <!--contact address  --> 
+  <h2 style="text-align: center;color: #008037">Love to Hear From You,
+    Lets Get In Touch!</h2>
+  <br>
+<div class="row">
+  <div class="column">
+    <p>
+      <h4><b>Corporate Office</b></h4><br>
+      Medlife Foundation<br>
+A/04, First floor, <br>Shri Dattdeep CHS Ltd.<br>
+Church Rd., Rameshwadi,<br>
+Badlapur (w) 421503 
+    </p>
+  </div>
+  <div class="column" >
+    <p>
+      <h4><b>Contact Details</b></h4><br>
+      <a style="color: black;" href="tel:827-532-0465"><i class="fa fa-phone mr-3"></i></a>
+      Bhushan Shirude<br>
+      +91 70204 38881 <br>
+
+      <!--
+      <a style="color: black;" href="tel:997-005-4699"><i class="fa fa-phone mr-3"></i></a>
+      Sandeep Shirude<br>
+      +91 9970054699<br>
+
+      <a style="color: black;" href="tel:930-739-9492"><i class="fa fa-phone mr-3"></i></a>
+      Dr.Bhushan<br>
+      +91 9307399492<br>-->
+
+      </p>
+  </div>
+  <div class="column" >
+    <p>
+      <h4><b>Registered Address</b></h4><br>
+      Medlife House<br>
+      House.no-693,<br> At/Post:Bahal,<br>
+      Tal: Chalisgaon Dist: Jalgaon<br>
+      Maharashtra, India-424106<br>
+     
+      
+      </p>
+  </div>
+</div>
+<!--contact address  -->
+
+
+<!-- map  -->
+<br><br>
+  <div class="map">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14939.971996973247!2d75.0465978!3d20.5883435!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa4524baa858273e2!2sMedlife%20Foundation!5e0!3m2!1sen!2sin!4v1641977820013!5m2!1sen!2sin"
+        width="80%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<!-- map  -->
+
+
+<!-- donatevolunteer section  
+<div class="header-image">
+    <div class="header-text">
+        <div class="donate">
+            <h2>Donate <span>Online!</span></h2>
+            <p>Donate to make a difference. Get 50% tax exemption on your donations and help us create a better
+                future for India.</p>
+            <a href="../occ.html" target="_blank"><button>DONATE NOW</button></a>
+            </button>
+
+
+        </div>
+        <div class="volunteer">
+            <h2>Become a <span>Volunteer</span></h2>
+            <p>Medlife Foundation volunteers are self-motivated people of all ages and from different walks of life
+                who give of their time and resources to make positive difference in the lives of children.</p>
+            <a href="../VolunteerForm.html"target="_blank">  <button>JOIN TODAY</button></a>
+        </div>
+    </div>
+</div>
+  -->
+
+
+<!-- subscribe  -->
+</section>
+
+
+<!-- subscribe  
+<div class="subscribe">
+  <h1 style="font-weight: bolder;"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;Join our community</h1>
+  <input class="inptfld" name="email" placeholder=" Your Email" type="text">
+  <input style="margin-top: 5px;" class="subscribebtn" value="Subscribe Now!" type="submit">
+</div><br>
+  -->
+
+
+   <!-- topbutton  -->
+   <div id="topbtn">
+    <a href="#" style="color:white"><i class="fa fa-arrow-up" aria-hidden="true"></i> </a>
+</div>
+<!-- topbutton  -->
+
+
+<!-- FOOTER -->
+<div class="footer">
+  <footer class="text-center text-lg-start text-white" style="background-color: #510216;width: 100%;">
+
+      <!-- Section: Links  -->
+      <section class="" style="padding:1%;">
+          <div class="container text-center text-md-start mt-5">
+              <!-- Grid row -->
+              <div class="row mt-3">
+                  <!-- Grid column -->
+                 
+
+
+
+
+
+                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                      <!-- Links -->
+                      <h6 class="text-uppercase fw-bold">Contact</h6><br>
+                      <!-- <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                          style="width: 60px; background-color: #7c4dff; height: 2px" /> -->
+                      <p> <a href="tel:827-532-0465" style="color: white;"><i class="fa fa-phone mr-3"></i><span id="contactusname">Mr.Bhushan :+91 70204 38881</span> </a></p>
+          
+                     <!--- <p><a href="tel:997-005-4699" style="color: white;"><i class="fa fa-phone mr-3"></i>
+                             <span id="contactusname">Mr.Sandeep : +91 99700 54699</span> </a></p>
+                      <p><a href="tel:930-739-9492" style="color: white;"><i class="fa fa-phone mr-3"></i>
+                                <span id="contactusname">Dr.Bhushan : +91 93073 99492</span> </a></p>-->
+                      <!-- <p><a href="tel:930-739-9492" style="color: white;"><i class="fa fa-phone mr-3"></i> Dr.Bhushan : +91 93073 99492</a></p>                  -->
+                      <p><a href="mailto:medsysconsultancy@gmail.com " style="color: white;"><i
+                                  class="fa fa-envelope mr-3"></i>
+                             <span id="contactusname">medsysconsultancy@gmail.com </span> </a> </p>
+                      <p><a href="index.html" style="color: white;"><i
+                                  class="fa fa-globe"></i>&nbsp
+                                  www.medsysconsultancy.com</a> </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+
+      <!-- Copyright -->
+
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+          <div id="socialicon">
+            <p>FOLLOW US  &nbsp;ON SOCIAL MEDIA</p>
+
+              <a href="https://www.facebook.com/medsysconsultancy/?ref=pages_you_manage " target="_blank"
+                  class="text-white">
+                  <i class="fa fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/MedsysIndia?fbclid=IwAR2NBFx4fVus5BIiCoZjxsxmz11QMM9T6F1NJyNoATQNv-Uv1O0aSCp-Zxk " target="_blank" class="text-white">
+                  <i class="fa fa-twitter"></i>
+              </a>
+              <a href="Home.html" target="_blank" class="text-white">
+                  <i class="fa fa-google"></i>
+              </a>
+              <a href="https://www.instagram.com/medsysconsultancy/ " target="_blank"
+                  class="text-white ">
+                  <i class="fa fa-instagram"></i>
+              </a>
+              <!---
+              <a href="https://www.youtube.com/c/MedlifeFoundation" target="_blank"
+                  class="text-white">
+                  <i class="fa fa-youtube"></i>
+              </a>-->
+
+              <a href="https://www.linkedin.com/company/30242565/admin/ " target="_blank"
+                  class="text-white ">
+                  <i class="fa fa-linkedin"></i>
+              </a>
+
+          </div><br>
+          © 2016-2022 Copyright:&nbsp;
+          <a class="text-white" href="index.html">Medsys </a>|
+          <a class="text-white" href="Privacy/privacy.html">Privacy Policy</a>|
+      
+          <a class="text-white" href="Refund/refund.html">Refund Policy</a>
+         
+      </div>
+
+  </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
