@@ -1,7 +1,11 @@
 *
 {
 padding:0;
-margin:0;
+margin:0;}
+
+.section-container{
+padding-left: 90px;
+padding-right: 90px;
 }
 body
 {
@@ -39,7 +43,7 @@ margin-bottom:20px;
 .section-container .columns.content .content-container p
 {
 font-weight:400;
-font-size:16px;
+font-size:18px;
 margin-bottom:20px;
 margin-bottom:15px;
 text-align:justify;
@@ -62,11 +66,13 @@ height:250px;
 {
 display:block;
 order:2;
+padding: 5px;
 width:100%;
 }
 .section-container .columns.content .content-container
 {
-padding:10px 15px;
+padding:20px 20px;
+font-size:25px;
 }
 .section-container .columns.content .content-container h5
 {
